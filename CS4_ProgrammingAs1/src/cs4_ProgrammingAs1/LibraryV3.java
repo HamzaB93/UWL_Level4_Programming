@@ -1,6 +1,6 @@
 package cs4_ProgrammingAs1;
 
-public class Library
+public class LibraryV3
 {
 	//Variables
 	int refNum;
@@ -21,14 +21,14 @@ public class Library
 	}
 	
 	//Creating default values with the Set method
-	public Library()
+	public LibraryV3()
 	{
 		set(0000 , "Unknown" , "Unknown" , "Unknown" , 0000);
 	}
 	
 	
 	//Set method to create a constructor with parameters
-	public Library(int aRefNum, String aBookName, String aGenre, 
+	public LibraryV3(int aRefNum, String aBookName, String aGenre, 
 			String aPublisher, int aPublishYear)
 	{
 		set(aRefNum , aBookName , aGenre , aPublisher , aPublishYear);
