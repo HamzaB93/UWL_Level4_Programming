@@ -8,7 +8,7 @@ public class LibraryV1_Test
 		
 		//Default constructor is called in
 		//Created and object called test1
-		Library test1 = new Library();
+		LibraryV1 test1 = new LibraryV1();
 		
 		//Using the print method made in Library
 		test1.print();

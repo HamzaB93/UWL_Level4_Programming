@@ -8,7 +8,7 @@ public class LibraryV2_Test
 		
 		//Default constructor is called in
 		//Created and object called test1
-		Library test1 = new Library();
+		LibraryV2 test1 = new LibraryV2();
 		
 		//Using the print method made in Library
 		test1.print();
@@ -17,7 +17,7 @@ public class LibraryV2_Test
 		
 		//Constructor with parameters is called in
 		//Creating another object called test2
-		Library test2 = new Library(6628 , "Computer Science", "Education"
+		LibraryV2 test2 = new LibraryV2(6628 , "Computer Science", "Education"
 				, "UWL", 2014);
 		
 		test2.print();
