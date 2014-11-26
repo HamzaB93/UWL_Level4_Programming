@@ -1,7 +1,5 @@
 package cs4_ProgrammingAs1;
 
-import java.util.concurrent.SynchronousQueue;
-
 public class LibraryV4_Test 
 {
 	public static void main(String[] args) 

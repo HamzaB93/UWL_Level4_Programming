@@ -114,4 +114,10 @@ public class Library
 		System.out.println("Published Year: " + publishYear);
 		System.out.println("Stock: " + stock);
 	}
+	
+	public String toString()
+	{
+		return refNum +" "+ bookName +" "+ genre + publisher +
+				" "+ publishYear +" "+ stock;
+	}
 }
