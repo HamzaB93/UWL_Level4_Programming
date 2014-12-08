@@ -1,11 +1,11 @@
 package cs4_ProgrammingAs1;
 
-public class LibraryV4_Test 
+public class BookV4_Test 
 {
 	public static void main(String[] args) 
 	{
 		//Creating new object with parameters
-		LibraryV4 test4 = new LibraryV4(101 , "Computers" , "Education"
+		BookV4 test4 = new BookV4(101 , "Computers" , "Education"
 				, "Oxford", 2014 , 5);
 		test4.print();
 		

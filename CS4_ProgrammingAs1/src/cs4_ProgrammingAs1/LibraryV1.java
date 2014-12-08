@@ -1,31 +1,41 @@
 package cs4_ProgrammingAs1;
 
-public class LibraryV1
+import java.util.ArrayList;
+
+import cs4_ProgrammingAs1.Book;
+
+public class LibraryV1 
 {
-	//Variables
-	int refNum;
-	String bookName;
-	String genre;
-	String publisher;
-	int publishYear;
+	//The array list will store contents of the Library class
+	ArrayList<Book> Libraries;
 	
-	//Default constructor - giving default values to the variables
+	
+	//Created a constructor. Has a container which holds items from the Library class
 	public LibraryV1()
 	{
-		refNum = 0000;
-		bookName = "Unknown";
-		genre = "Unknown";
-		publisher = "Unknown";
-		publishYear = 0000;
+		Libraries = new ArrayList<Book>();
+	}
+	
+	//A will return the amount of books there are in the library
+	public int getSize()
+	{
+		return Libraries.size();
 	}
 
-	//Print method - print out all the default values
-	public void print()
+	//Using the ask method so that user can enter their details
+	public void add(Book aLibrary)
 	{
-		System.out.println("Reference Number: " + refNum);
-		System.out.println("Book Name: " + bookName);
-		System.out.println("Genre: " + genre);
-		System.out.println("Publisher: " + publisher);
-		System.out.println("Published Year: " + publishYear);
+		Libraries.add(aLibrary);
+	}
+	
+	//Print method to show how many items/books there are in the
+	// Libraries class
+	public void print (String header)
+	{
+		System.out.println(header);
+		//When i is 0, until it is less than Libraries, increment 
+		//by 1, get the object and print it out
+		for (int i=0; i < Libraries.size(); i++)
+			System.out.println(Libraries.get(i));
 	}
 }

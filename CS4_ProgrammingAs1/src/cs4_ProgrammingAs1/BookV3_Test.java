@@ -1,13 +1,13 @@
 package cs4_ProgrammingAs1;
 
-public class LibraryV3_Test 
+public class BookV3_Test 
 {
 	public static void main(String[] args) 
 	{
 		System.out.println("Testing LibraryV3");
 		
 		//Using the default values and printing them
-		LibraryV3 test1 = new LibraryV3();
+		BookV3 test1 = new BookV3();
 		System.out.println("Test1 is:");
 		test1.print();
 		
@@ -21,7 +21,7 @@ public class LibraryV3_Test
 		System.out.println("\n");
 		
 		//Using parameterised constructor
-		LibraryV3 test2 = new LibraryV3(6628 , "Computer Science", "Education"
+		BookV3 test2 = new BookV3(6628 , "Computer Science", "Education"
 				, "UWL", 2014);
 		
 		test2.print();

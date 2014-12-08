@@ -1,6 +1,6 @@
 package cs4_ProgrammingAs1;
 
-public class LibraryV2
+public class BookV2
 {
 	//Variables
 	int refNum;
@@ -10,7 +10,7 @@ public class LibraryV2
 	int publishYear;
 	
 	//Default constructor - giving default values to the variables
-	public LibraryV2()
+	public BookV2()
 	{
 		refNum = 0000;
 		bookName = "Unknown";
@@ -20,7 +20,7 @@ public class LibraryV2
 	}
 
 	//Creating a constructor with parameters
-	public LibraryV2(int aRefNum, String aBookName, String aGenre, 
+	public BookV2(int aRefNum, String aBookName, String aGenre, 
 			String aPublisher, int aPublishYear)
 	{
 		refNum = aRefNum;

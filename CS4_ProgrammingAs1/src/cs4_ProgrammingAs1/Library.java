@@ -1,123 +1,56 @@
 package cs4_ProgrammingAs1;
 
-public class Library
+import java.util.ArrayList;
+
+import cs4_ProgrammingAs1.Book;
+
+public class Library 
 {
-	//Variables
-	int refNum;
-	String bookName;
-	String genre;
-	String publisher;
-	int publishYear;
-	int stock; //added 
+	//The array list will store contents of the Library class
+	ArrayList<Book> library;
+	//Adding another property to the array called keys
+	ArrayList<String> keys;
 	
-	
-	//Set method - Used later to change the default value of Variables
-	public void set(int aRefNum, String aBookName, String aGenre, 
-			String aPublisher, int aPublishYear, int aStock)
-	{
-		refNum = aRefNum;
-		bookName = aBookName;
-		genre = aGenre;
-		publisher = aPublisher;
-		publishYear = aPublishYear;
-		stock = aStock;
-	}
-	
-	
-	//Creating default values with the Set method
+	//Created a constructor. Has a container which holds items from the Library class
 	public Library()
 	{
-		set(0000 , "Unknown" , "Unknown" , "Unknown" , 0000, 2);
+		library = new ArrayList<Book>();
+		keys = new ArrayList<String>();
 	}
 	
-	
-	//Set method to create a constructor with parameters
-	public Library(int aRefNum, String aBookName, String aGenre, 
-			String aPublisher, int aPublishYear, int aStock)
+	//A will return the amount of books there are in the library
+	public int getSize()
 	{
-		set(aRefNum , aBookName , aGenre , aPublisher , aPublishYear, aStock);
-	}	
-	
-	
-	//Set individual data members so details can be changed
-	public void setRefNum (int aRefNum)
-	{
-		refNum = aRefNum; 
+		return library.size();
 	}
-	public void setBookName(String aBookName)
+
+	//Using the ask method so that user can enter their details
+	public void add(Book aLibrary)
 	{
-		bookName= aBookName; 
-	}
-	public void setGenre (String aGenre)
-	{
-		genre = aGenre; 
-	}
-	public void setPublisher(String aPublisher)
-	{
-		publisher = aPublisher; 
-	}
-	public void setPublishYear(int aPublishYear)
-	{
-		publishYear = aPublishYear; 
-	}
-	public void setStock(int aStock)
-	{
-		stock = aStock; 
-	}
-	//Accessor methods. Will allow data to be provided to other classes
-	public int getRefNum()
-	{
-		return refNum;
-	}
-	public String getBookName()
-	{
-		return bookName;
-	}
-	public String getGenre()
-	{
-		return genre;
-	}
-	public String getPublisher()
-	{
-		return publisher;
-	}
-	public int getPublishYear()
-	{
-		return publishYear;
-	}
-	public int getStock()
-	{
-		return stock;
+		library.add(aLibrary);
+		keys.add(aLibrary.getRefNum());
 	}
 	
-	
-	//Ask method using the console class. Will allow users to enter their own values
-	// These values will be using the set method also
-	public void ask(String prompt)
+	public Book find(String aRefNum)
 	{
-		System.out.println("Enter the details of the book\n");
-		setRefNum (Console.askInt("Enter the book's reference number: "));
-		setBookName (Console.askString("Enter the name of the book: "));
-		setGenre (Console.askString("Enter the books genre: "));
-		setPublisher (Console.askString("Enter the name of the publisher: "));
-		setPublishYear (Console.askInt("Enter year the book was published: "));
-		setStock (Console.askInt("Enter the the stock: "));
+		int index = keys.indexOf(aRefNum);
+		if(index == -1)
+		{	
+			return null;
+		}
+		else
+		{
+			return library.get(index);
+		}
 	}
-	
-	//Print method - print out all the default values
-	public void print()
+	//Print method to show how many items/books there are in the
+	// Libraries class
+	public void print (String header)
 	{
-		System.out.println("Reference Number: " + refNum);
-		System.out.println("Book Name: " + bookName);
-		System.out.println("Genre: " + genre);
-		System.out.println("Publisher: " + publisher);
-		System.out.println("Published Year: " + publishYear);
-		System.out.println("Stock: " + stock);
-	}
-	
-	public String toString()
-	{
-		return refNum +" "+ bookName +" "+ genre + publisher +
-				" "+ publishYear +" "+ stock;
+		System.out.println(header);
+		//When i is 0, until it is less than Libraries, increment 
+		//by 1, get the object and print it out
+		for (int i=0; i < library.size(); i++)
+			System.out.println(library.get(i));
 	}
 }

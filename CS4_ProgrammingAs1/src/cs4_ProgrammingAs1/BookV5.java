@@ -1,6 +1,6 @@
 package cs4_ProgrammingAs1;
 
-public class LibraryV4
+public class BookV5
 {
 	//Variables
 	int refNum;
@@ -25,14 +25,14 @@ public class LibraryV4
 	
 	
 	//Creating default values with the Set method
-	public LibraryV4()
+	public BookV5()
 	{
 		set(0000 , "Unknown" , "Unknown" , "Unknown" , 0000, 2);
 	}
 	
 	
 	//Set method to create a constructor with parameters
-	public LibraryV4(int aRefNum, String aBookName, String aGenre, 
+	public BookV5(int aRefNum, String aBookName, String aGenre, 
 			String aPublisher, int aPublishYear, int aStock)
 	{
 		set(aRefNum , aBookName , aGenre , aPublisher , aPublishYear, aStock);
@@ -90,6 +90,19 @@ public class LibraryV4
 		return stock;
 	}
 	
+	
+	//Ask method using the console class. Will allow users to enter their own values
+	// These values will be using the set method also
+	public void ask(String prompt)
+	{
+		System.out.println("Enter the details of the book\n");
+		setRefNum (Console.askInt("Enter the book's reference number: "));
+		setBookName (Console.askString("Enter the name of the book: "));
+		setGenre (Console.askString("Enter the books genre: "));
+		setPublisher (Console.askString("Enter the name of the publisher: "));
+		setPublishYear (Console.askInt("Enter year the book was published: "));
+		setStock (Console.askInt("Enter the the stock: "));
+	}
 	
 	//Print method - print out all the default values
 	public void print()
