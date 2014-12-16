@@ -1,6 +1,6 @@
 package cs4_ProgrammingAs1;
 
-public class Stock 
+public class StockV3 
 {
 	public static void main(String[] args) 
 	{
