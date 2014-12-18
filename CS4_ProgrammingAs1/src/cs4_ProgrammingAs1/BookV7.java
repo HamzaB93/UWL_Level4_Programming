@@ -1,6 +1,6 @@
 package cs4_ProgrammingAs1;
 
-public class Book
+public class BookV7
 {
 	//Variables
 	String refNum; // Reference number
@@ -26,7 +26,7 @@ public class Book
 	
 	
 	//Set method - creating default values with the 
-	public Book()
+	public BookV7()
 	{	//refNum	, bookName	, genre		, publisher, year, 	stock
 		set("0000" , "Unknown" , "Unknown" , "Unknown" , 0000, 2);
 		/*The values are default. If using the method on its own,
@@ -37,7 +37,7 @@ public class Book
 	
 	
 	//Set method - creating a constructor with parameters
-	public Book(String aRefNum, String aBookName, String aGenre, 
+	public BookV7(String aRefNum, String aBookName, String aGenre, 
 			String aPublisher, int aPublishYear, int aStock)
 	{
 		set(aRefNum , aBookName , aGenre , aPublisher , aPublishYear, aStock);

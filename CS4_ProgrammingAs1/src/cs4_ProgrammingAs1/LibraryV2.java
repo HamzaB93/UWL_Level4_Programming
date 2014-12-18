@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import cs4_ProgrammingAs1.Book;
 
-public class Library 
+public class LibraryV2 
 {
 	//ArrayList - The array list will store contents of the Library class
 	ArrayList<Book> library;
@@ -15,7 +15,7 @@ public class Library
 	/*Created constructors - Has a container which holds items from the Library class
 	 * Another container for keys which involve storing reference numbers
 	 */
-	public Library()
+	public LibraryV2()
 	{
 		library = new ArrayList<Book>();
 		keys = new ArrayList<String>();
